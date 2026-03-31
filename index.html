@@ -10,6 +10,9 @@
 <meta name="author" content="ШокоЛэнд">
 <link rel="canonical" href="https://шоколэнд.рус">
 
+<!-- Фавикон для сайта ШокоБокс -->
+<link rel="icon" type="image/png" sizes="32x32" href="./photos/favicon.png">
+
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://шоколэнд.рус">
@@ -712,60 +715,57 @@
 </footer>
 
 <script>
-  async function handleSubmit(e) {
-    e.preventDefault();
-    const form = document.getElementById('b2b-form');
-    const btn = document.getElementById('submit-btn');
-    const errEl = document.getElementById('form-error');
+async function handleSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('b2b-form');
+  const btn = document.getElementById('submit-btn');
+  const errEl = document.getElementById('form-error');
 
-    const data = Object.fromEntries(new FormData(form).entries());
+  const data = Object.fromEntries(new FormData(form).entries());
+  if (!data.name || !data.contact) return;
 
-    if (!data.name || !data.contact) return;
+  btn.disabled = true;
+  btn.textContent = 'Отправляем...';
+  errEl.style.display = 'none';
 
-    btn.disabled = true;
-    btn.textContent = 'Отправляем...';
-    errEl.style.display = 'none';
+  const purposeMap = {
+    ny: 'Новогодние подарки',
+    team: 'Тимбилдинг / корпоратив',
+    clients: 'Подарки клиентам',
+    event: 'Конференция / мероприятие',
+    welcome: 'Welcome-набор / онбординг',
+    other: 'Другое'
+  };
 
-    const purposeMap = {
-      ny: 'Новогодние подарки',
-      team: 'Тимбилдинг / корпоратив',
-      clients: 'Подарки клиентам',
-      event: 'Конференция / мероприятие',
-      welcome: 'Welcome-набор / онбординг',
-      other: 'Другое'
-    };
+  const text = [
+    '🍫 <b>Новая заявка с сайта ШокоБокс</b>',
+    '',
+    `👤 <b>Имя:</b> ${data.name}`,
+    `🏢 <b>Компания:</b> ${data.company || '—'}`,
+    `📞 <b>Контакт:</b> ${data.contact}`,
+    `📦 <b>Количество:</b> ${data.quantity || 'не указано'}`,
+    `🎯 <b>Сценарий:</b> ${purposeMap[data.purpose] || data.purpose || '—'}`,
+    `💬 <b>Комментарий:</b> ${data.message || '—'}`,
+  ].join('\n');
 
-    const text = [
-      '🍫 <b>Новая заявка с сайта ШокоБокс</b>',
-      '',
-      `👤 <b>Имя:</b> ${data.name}`,
-      `🏢 <b>Компания:</b> ${data.company || '—'}`,
-      `📞 <b>Контакт:</b> ${data.contact}`,
-      `📦 <b>Количество:</b> ${data.quantity || 'не указано'}`,
-      `🎯 <b>Сценарий:</b> ${purposeMap[data.purpose] || data.purpose || '—'}`,
-      `💬 <b>Комментарий:</b> ${data.message || '—'}`,
-    ].join('\n');
+  try {
+    const res = await fetch('https://chocoland-70m8wlbo8-b1gfarmer.vercel.app/api/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text })
+    });
 
-    try {
-      const res = await fetch('/api/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ text })
-      });
+    if (!res.ok) throw new Error('Ошибка отправки');
 
-      if (!res.ok) throw new Error('Ошибка отправки');
-
-      form.style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    } catch (err) {
-      console.error(err);
-      btn.disabled = false;
-      btn.textContent = 'Отправить заявку';
-      errEl.style.display = 'block';
-    }
+    form.style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  } catch (err) {
+    console.error(err);
+    btn.disabled = false;
+    btn.textContent = 'Отправить заявку';
+    errEl.style.display = 'block';
   }
+}
 
   function switchSet(set, btn) {
     document.getElementById('ingredients-max').style.display = set === 'max' ? 'flex' : 'none';
