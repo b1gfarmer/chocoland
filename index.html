@@ -749,9 +749,11 @@ async function handleSubmit(e) {
   ].join('\n');
 
   try {
-    const res = await fetch('https://chocoland-70m8wlbo8-b1gfarmer.vercel.app/api/send', {
+    const res = await fetch('https://chocoland-k5h5782fr-b1gfarmer.vercel.app/api/send', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({ text })
     });
 
