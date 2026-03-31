@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Страница не найдена — ШокоБокс</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#1a1523;--purple:#6b3fa0;--cream:#f5f0ea;--ink-60:rgba(26,21,35,.6);--ink-08:rgba(26,21,35,.08);--purple-hi:#8b5cc4;--purple-12:rgba(107,63,160,.12);--ink-2:#28203a;--cream-90:rgba(245,240,234,.9);--cream-28:rgba(245,240,234,.28);--cream-10:rgba(245,240,234,.1)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'DM Sans',sans-serif;background:var(--ink);color:var(--cream);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:24px 60px;border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--cream-90);text-decoration:none;letter-spacing:.03em}
+  .nav-brand em{font-style:italic;color:var(--purple-hi)}
+  .main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 40px;position:relative;overflow:hidden}
+  .main::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(107,63,160,.15) 0%,transparent 70%);pointer-events:none}
+  .content{text-align:center;position:relative;z-index:1;max-width:520px}
+  .num{font-family:'Cormorant Garamond',serif;font-size:clamp(7rem,18vw,14rem);font-weight:300;line-height:1;color:var(--cream-10);letter-spacing:-.04em;display:block;margin-bottom:-20px}
+  .title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:var(--cream-90);margin-bottom:20px;line-height:1.2}
+  .title em{font-style:italic;color:var(--purple-hi)}
+  .desc{font-size:.95rem;font-weight:300;color:var(--cream-28);line-height:1.75;margin-bottom:48px}
+  .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn-main{display:inline-flex;align-items:center;gap:8px;background:var(--purple);color:var(--cream);font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:500;padding:14px 28px;border-radius:2px;text-decoration:none;letter-spacing:.06em;transition:background .2s}
+  .btn-main:hover{background:var(--purple-hi)}
+  .btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--cream-28);font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:500;padding:14px 28px;border-radius:2px;text-decoration:none;letter-spacing:.06em;border:1px solid rgba(245,240,234,.15);transition:border-color .2s,color .2s}
+  .btn-ghost:hover{border-color:var(--purple-hi);color:var(--cream-90)}
+  footer{padding:24px 60px;border-top:1px solid rgba(255,255,255,.07);text-align:center}
+  .footer-copy{font-size:.72rem;font-weight:300;color:rgba(245,240,234,.15)}
+  @media(max-width:640px){nav,footer{padding-left:20px;padding-right:20px}.main{padding:40px 20px}.actions{flex-direction:column;align-items:center}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-brand">Шоко<em>Лэнд</em></a>
+</nav>
+
+<main class="main">
+  <div class="content">
+    <span class="num">404</span>
+    <h1 class="title">Страница<br><em>не нашлась</em></h1>
+    <p class="desc">Возможно, ссылка устарела или адрес введён с опечаткой.<br>Зато на главной — всё на месте.</p>
+    <div class="actions">
+      <a href="/" class="btn-main">← На главную</a>
+      <a href="/#contact" class="btn-ghost">Связаться с нами</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p class="footer-copy">© 2026 ШокоЛэнд · Казань</p>
+</footer>
+</body>
+</html>

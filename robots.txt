@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /photos/
+
+Sitemap: https://shokobox.ru/sitemap.xml
