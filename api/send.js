@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   const { text } = req.body;
 
   const TG_TOKEN = process.env.TG_TOKEN;
-  const CHAT_IDS = ['468139610', '757090167'];
+  const CHAT_IDS = process.env.TG_CHAT_IDS.split(',');
 
   try {
     await Promise.all(

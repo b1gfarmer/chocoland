@@ -747,17 +747,15 @@
     ].join('\n');
 
     try {
-      const results = await Promise.all(
-        TG_CHAT_IDS.map(chat_id =>
-          fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ chat_id, text, parse_mode: 'HTML' })
-          }).then(r => r.json())
-        )
-      );
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ text })
+      });
 
-      if (results.some(r => !r.ok)) throw new Error('Ошибка отправки');
+      if (!res.ok) throw new Error('Ошибка отправки');
 
       form.style.display = 'none';
       document.getElementById('form-success').style.display = 'block';
