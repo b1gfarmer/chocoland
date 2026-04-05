@@ -57,34 +57,67 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Наборы ШокоБокс",
-  "itemListElement": [
+  "@type": "Product",
+  "name": "ШокоБокс Max",
+  "description": "Набор для приготовления шоколадной плитки своими руками. 600 г, 3 вида бельгийского шоколада, клубника, орехи, термометр, форма, инструкция.",
+  "brand": {"@type": "Brand", "name": "ШокоЛэнд"},
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.ozon.ru/product/podarochnyy-nabor-shokobox-dlya-prigotovleniya-shokolada-2898889068/",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "seller": {"@type": "Organization", "name": "ШокоЛэнд"}
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "150",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "item": {
-        "@type": "Product",
-        "name": "ШокоБокс Max",
-        "description": "Набор для приготовления шоколадной плитки. 600 г, 3 вида бельгийского шоколада.",
-        "url": "https://www.ozon.ru/product/podarochnyy-nabor-shokobox-dlya-prigotovleniya-shokolada-2898889068/",
-        "brand": {"@type": "Brand", "name": "ШокоЛэнд"},
-        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150"}
-      }
+      "@type": "Review",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "author": {"@type": "Person", "name": "Анастасия"},
+      "reviewBody": "Подарила маме на день рождения — была в полном восторге. Делали вместе, это оказалось таким приятным занятием. Шоколад получился очень вкусным, клубника добавляет приятную кислинку."
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "item": {
-        "@type": "Product",
-        "name": "ШокоБокс Mini",
-        "description": "Набор для приготовления шоколадных конфет. 400 г, 2 вида бельгийского шоколада.",
-        "url": "https://www.ozon.ru/product/podarochnyy-nabor-shokobox-mini-dlya-prigotovleniya-shokoladnykh-konfet-2898892101/",
-        "brand": {"@type": "Brand", "name": "ШокоЛэнд"},
-        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150"}
-      }
+      "@type": "Review",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "author": {"@type": "Person", "name": "Мария"},
+      "reviewBody": "Брала набор для корпоратива — коллеги были в диком восторге. Делали конфеты вместе, было очень весело. Упаковка очень красивая, всё аккуратно. Однозначно возьму ещё."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "author": {"@type": "Person", "name": "Елена"},
+      "reviewBody": "Дочка 9 лет делала сама по инструкции, я только помогала с горячим шоколадом. Она была так горда результатом. Конфеты получились лучше магазинных."
     }
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "ШокоБокс Mini",
+  "description": "Набор для приготовления шоколадных конфет своими руками. 400 г, 2 вида бельгийского шоколада, клубника, хрустящие шарики, форма, инструкция.",
+  "brand": {"@type": "Brand", "name": "ШокоЛэнд"},
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.ozon.ru/product/podarochnyy-nabor-shokobox-mini-dlya-prigotovleniya-shokoladnykh-konfet-2898892101/",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "seller": {"@type": "Organization", "name": "ШокоЛэнд"}
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "150",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
 }
 </script>
 
@@ -186,7 +219,7 @@
   .product-card:hover{border-color:var(--purple-25);transform:translateY(-4px)}
   .product-visual{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--cream-3)}
   .product-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block}
-  .product-badge{position:absolute;top:16px;left:16px;z-index:2;font-size:.61rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);background:var(--purple-12);padding:4px 10px;border-radius:2px;backdrop-filter:blur(4px)}
+  .product-badge{position:absolute;top:8px;left:8px;z-index:2;font-size:.68rem;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-90);background:var(--purple-12);padding:4px 10px;border-radius:2px;backdrop-filter:blur(4px)}
   .product-body{padding:32px 32px 36px}
   .product-name{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:400;color:var(--ink);margin-bottom:4px}
   .product-sub{font-size:.82rem;color:var(--ink-40);margin-bottom:28px;font-weight:300}
@@ -602,26 +635,20 @@
       <div><div class="rating-stars">★★★★★</div><div class="rating-count">150+ отзывов на OZON · Рейтинг продавца 4.9</div></div>
     </div>
     <div class="reviews-grid">
-      <article class="review-card" itemscope itemtype="https://schema.org/Review">
-        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization" style="display:none"><span itemprop="name">ШокоЛэнд</span></div>
-        <meta itemprop="ratingValue" content="5">
+      <article class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text" itemprop="reviewBody">«Подарила маме на день рождения — была в полном восторге. Делали вместе, это оказалось таким приятным занятием. Шоколад получился очень вкусным, клубника добавляет приятную кислинку.»</p>
-        <div class="reviewer"><div class="reviewer-init">А</div><div><div itemprop="author" itemscope itemtype="https://schema.org/Person"><div class="reviewer-name" itemprop="name">Анастасия</div></div><div class="reviewer-meta">Проверенный покупатель · OZON</div></div></div>
+        <p class="review-text">«Подарила маме на день рождения — была в полном восторге. Делали вместе, это оказалось таким приятным занятием. Шоколад получился очень вкусным, клубника добавляет приятную кислинку.»</p>
+        <div class="reviewer"><div class="reviewer-init">А</div><div><div class="reviewer-name">Анастасия</div><div class="reviewer-meta">Проверенный покупатель · OZON</div></div></div>
       </article>
-      <article class="review-card" itemscope itemtype="https://schema.org/Review">
-        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization" style="display:none"><span itemprop="name">ШокоЛэнд</span></div>
-        <meta itemprop="ratingValue" content="5">
+      <article class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text" itemprop="reviewBody">«Брала набор для корпоратива — коллеги были в диком восторге. Делали конфеты вместе, было очень весело. Упаковка очень красивая, всё аккуратно. Однозначно возьму ещё.»</p>
-        <div class="reviewer"><div class="reviewer-init">М</div><div><div itemprop="author" itemscope itemtype="https://schema.org/Person"><div class="reviewer-name" itemprop="name">Мария</div></div><div class="reviewer-meta">Проверенный покупатель · OZON</div></div></div>
+        <p class="review-text">«Брала набор для корпоратива — коллеги были в диком восторге. Делали конфеты вместе, было очень весело. Упаковка очень красивая, всё аккуратно. Однозначно возьму ещё.»</p>
+        <div class="reviewer"><div class="reviewer-init">М</div><div><div class="reviewer-name">Мария</div><div class="reviewer-meta">Проверенный покупатель · OZON</div></div></div>
       </article>
-      <article class="review-card" itemscope itemtype="https://schema.org/Review">
-        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization" style="display:none"><span itemprop="name">ШокоЛэнд</span></div>
-        <meta itemprop="ratingValue" content="5">
+      <article class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text" itemprop="reviewBody">«Дочка 9 лет делала сама по инструкции, я только помогала с горячим шоколадом. Она была так горда результатом. Конфеты получились лучше магазинных.»</p>
-        <div class="reviewer"><div class="reviewer-init">Е</div><div><div itemprop="author" itemscope itemtype="https://schema.org/Person"><div class="reviewer-name" itemprop="name">Елена</div></div><div class="reviewer-meta">Проверенный покупатель · OZON</div></div></div>
+        <p class="review-text">«Дочка 9 лет делала сама по инструкции, я только помогала с горячим шоколадом. Она была так горда результатом. Конфеты получились лучше магазинных.»</p>
+        <div class="reviewer"><div class="reviewer-init">Е</div><div><div class="reviewer-name">Елена</div><div class="reviewer-meta">Проверенный покупатель · OZON</div></div></div>
       </article>
     </div>
   </div>

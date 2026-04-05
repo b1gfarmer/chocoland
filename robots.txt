@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /photos/
 
-Sitemap: https://shokobox.ru/sitemap.xml
+Sitemap: https://xn--d1aldicb1e1b.xn--p1acf/sitemap.xml
