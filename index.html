@@ -60,13 +60,46 @@
   "@type": "Product",
   "name": "ШокоБокс Max",
   "description": "Набор для приготовления шоколадной плитки своими руками. 600 г, 3 вида бельгийского шоколада, клубника, орехи, термометр, форма, инструкция.",
+  "image": "https://xn--d1aldicb1e1b.xn--p1acf/photos/max.webp",
   "brand": {"@type": "Brand", "name": "ШокоЛэнд"},
   "offers": {
     "@type": "Offer",
     "url": "https://www.ozon.ru/product/podarochnyy-nabor-shokobox-dlya-prigotovleniya-shokolada-2898889068/",
     "priceCurrency": "RUB",
+    "price": "2611",
     "availability": "https://schema.org/InStock",
-    "seller": {"@type": "Organization", "name": "ШокоЛэнд"}
+    "seller": {"@type": "Organization", "name": "ШокоЛэнд"},
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "RU",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "currency": "RUB"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "RU"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 3,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 7,
+          "unitCode": "DAY"
+        }
+      }
+    }
   },
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -97,19 +130,53 @@
   ]
 }
 </script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "ШокоБокс Mini",
   "description": "Набор для приготовления шоколадных конфет своими руками. 400 г, 2 вида бельгийского шоколада, клубника, хрустящие шарики, форма, инструкция.",
+  "image": "https://xn--d1aldicb1e1b.xn--p1acf/photos/mini.webp",
   "brand": {"@type": "Brand", "name": "ШокоЛэнд"},
   "offers": {
     "@type": "Offer",
     "url": "https://www.ozon.ru/product/podarochnyy-nabor-shokobox-mini-dlya-prigotovleniya-shokoladnykh-konfet-2898892101/",
     "priceCurrency": "RUB",
+    "price": "1741",
     "availability": "https://schema.org/InStock",
-    "seller": {"@type": "Organization", "name": "ШокоЛэнд"}
+    "seller": {"@type": "Organization", "name": "ШокоЛэнд"},
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "RU",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "currency": "RUB"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "RU"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 3,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 7,
+          "unitCode": "DAY"
+        }
+      }
+    }
   },
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -437,7 +504,9 @@
       </p>
       <div class="hero-ctas">
         <a href="#contact" class="btn-primary">Обсудить корпоративный заказ <span>→</span></a>
-        <a href="#products" class="btn-secondary">Посмотреть наборы <span>↓</span></a>
+        <a href="./docs/shokobox_kp.pdf" download="ШокоБокс_КП.pdf" class="btn-secondary">
+          Скачать коммерческое предложение <span>↓</span>
+        </a>
         <a href="https://t.me/quacks_quacks" target="_blank" class="btn-secondary">
           Написать в Telegram <span>↗</span>
         </a>
