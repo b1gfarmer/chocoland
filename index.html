@@ -188,6 +188,7 @@
 }
 </script>
 
+
 <style>
   :root {
     --ink:         #1a1523;
@@ -286,7 +287,7 @@
   .product-card:hover{border-color:var(--purple-25);transform:translateY(-4px)}
   .product-visual{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--cream-3)}
   .product-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block}
-  .product-badge{position:absolute;top:8px;left:8px;z-index:2;font-size:.68rem;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-90);background:var(--purple-12);padding:4px 10px;border-radius:2px;backdrop-filter:blur(4px)}
+  .product-badge{position:absolute;top:16px;left:16px;z-index:2;font-size:.61rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);background:var(--purple-12);padding:4px 10px;border-radius:2px;backdrop-filter:blur(4px)}
   .product-body{padding:32px 32px 36px}
   .product-name{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:400;color:var(--ink);margin-bottom:4px}
   .product-sub{font-size:.82rem;color:var(--ink-40);margin-bottom:28px;font-weight:300}
@@ -333,7 +334,7 @@
   .cases-section{padding:120px 0;background:var(--ink);overflow:hidden}
   .cases-inner{max-width:1200px;margin:0 auto;padding:0 60px}
   .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--cream-10);margin-top:64px}
-  .case-item{background:var(--ink);padding:44px 36px;transition:background .3s}
+  .case-item{background:var(--ink);padding:44px 36px;transition:background .3s;display:block;text-decoration:none;color:inherit}
   .case-item:hover{background:var(--ink-2)}
   .case-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--cream-10);line-height:1;margin-bottom:24px}
   .case-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--cream-90);margin-bottom:12px}
@@ -670,12 +671,12 @@
     <h2 class="display" style="color:var(--cream-90)">Когда ШокоБокс<br><em style="color:var(--purple-hi)">решает задачу</em></h2>
     <p class="section-lead" style="color:var(--cream-55)">Корпоративный клиент — это другой разговор. Не просто красивая упаковка, а опыт, который сотрудники и партнёры запомнят.</p>
     <div class="cases-grid">
-      <div class="case-item"><div class="case-num">01</div><h3 class="case-title">Новогодние подарки сотрудникам</h3><p class="case-desc">Замена стандартным конфетным наборам. Что-то, что люди не просто съедят — а сделают сами и расскажут всем.</p><span class="case-tag">от 50 штук</span></div>
-      <div class="case-item"><div class="case-num">02</div><h3 class="case-title">Тимбилдинг и корпоратив</h3><p class="case-desc">Командное занятие на 30 минут с вкусным результатом. Работает на любой аудитории — от маркетинга до топ-менеджмента.</p><span class="case-tag">от 10 штук</span></div>
-      <div class="case-item"><div class="case-num">03</div><h3 class="case-title">Подарки партнёрам и клиентам</h3><p class="case-desc">Нестандартный бизнес-подарок вместо ежедневника. Запоминается. Ассоциируется с вашим брендом.</p><span class="case-tag">от 20 штук</span></div>
-      <div class="case-item"><div class="case-num">04</div><h3 class="case-title">Конференции и форумы</h3><p class="case-desc">Велкам-пакет или подарок спикеру. Выделяется среди буклетов и ручек. Из Казани — с характером.</p><span class="case-tag">любой объём</span></div>
-      <div class="case-item"><div class="case-num">05</div><h3 class="case-title">Праздники и юбилеи компании</h3><p class="case-desc">Когда хочется дать что-то настоящее. Ручная сборка, бельгийский шоколад, казанское производство — это чувствуется.</p><span class="case-tag">от 30 штук</span></div>
-      <div class="case-item"><div class="case-num">06</div><h3 class="case-title">Welcome-набор для новых сотрудников</h3><p class="case-desc">Первый день в компании — с шоколадом, который новичок сделает сам. Запоминается лучше любого ежедневника.</p><span class="case-tag">онбординг</span></div>
+      <a href="/korporativnye-podarki/" class="case-item"><div class="case-num">01</div><h3 class="case-title">Новогодние подарки сотрудникам</h3><p class="case-desc">Замена стандартным конфетным наборам. Что-то, что люди не просто съедят — а сделают сами и расскажут всем.</p><span class="case-tag">от 50 штук →</span></a>
+      <a href="/timbilding-kazan/" class="case-item"><div class="case-num">02</div><h3 class="case-title">Тимбилдинг и корпоратив</h3><p class="case-desc">Командное занятие на 30 минут с вкусным результатом. Работает на любой аудитории — от маркетинга до топ-менеджмента.</p><span class="case-tag">от 10 штук →</span></a>
+      <a href="/podarki-partneram/" class="case-item"><div class="case-num">03</div><h3 class="case-title">Подарки партнёрам и клиентам</h3><p class="case-desc">Нестандартный бизнес-подарок вместо ежедневника. Запоминается. Ассоциируется с вашим брендом.</p><span class="case-tag">от 20 штук →</span></a>
+      <a href="/podarki-na-konferencii/" class="case-item"><div class="case-num">04</div><h3 class="case-title">Конференции и форумы</h3><p class="case-desc">Велкам-пакет или подарок спикеру. Выделяется среди буклетов и ручек. Из Казани — с характером.</p><span class="case-tag">любой объём →</span></a>
+      <a href="/podarki-na-yubiley/" class="case-item"><div class="case-num">05</div><h3 class="case-title">Праздники и юбилеи компании</h3><p class="case-desc">Когда хочется дать что-то настоящее. Ручная сборка, бельгийский шоколад, казанское производство — это чувствуется.</p><span class="case-tag">от 30 штук →</span></a>
+      <a href="/welcome-nabor/" class="case-item"><div class="case-num">06</div><h3 class="case-title">Welcome-набор для новых сотрудников</h3><p class="case-desc">Первый день в компании — с шоколадом, который новичок сделает сам. Запоминается лучше любого ежедневника.</p><span class="case-tag">онбординг →</span></a>
     </div>
   </div>
 </section>
